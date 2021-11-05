@@ -29,7 +29,11 @@ export const TechListModal = () => {
         <ul className="collection">
           {!loading &&
             techs.map((tech, indx) => {
-              return <li className="collection-item">{tech.tech}</li>;
+              return (
+                <li key={indx} className="collection-item">
+                  {tech.tech}
+                </li>
+              );
             })}
         </ul>
       </div>
